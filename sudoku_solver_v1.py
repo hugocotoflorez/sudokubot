@@ -1,12 +1,11 @@
 """
 Sudoku solver v1  
- Hugo Coto Florez 
- Backtracking algorithm  
- Playing on sudoku-online.org 
-  
- implementar recursion dividida en hilos 
- """ 
+Hugo Coto Florez 
+Backtracking algorithm  
+Playing on sudoku-online.org 
  
+implementar recursion dividida en hilos 
+""" 
 from webdriver_manager.chrome import ChromeDriverManager 
 from selenium.webdriver.chrome.service import Service 
 from selenium.webdriver.common.keys import Keys
@@ -16,7 +15,6 @@ from selenium import webdriver
 from time import perf_counter 
 import numpy as np 
 import os 
-
 
 #MAIN METHOD
 def main(): 
@@ -54,8 +52,7 @@ def main():
         #returns the board  
         return board_arr 
     
-
-            
+    
     def solve(n=0): 
         ''':Returns: None if board is not possible to solve
         array - solved board
@@ -105,7 +102,6 @@ def main():
                             #verdadero cuando retorne una array, y retornandola
                             return s 
                         
-                    
                     # si no se pudo completar con ningun posible numero,
                     # el tablero en esta celda pasa a default y
                     # se retorna None
